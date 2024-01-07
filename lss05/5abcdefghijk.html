@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 17 - 5abcdefghijk</title>
+</head>
+<body>
+  
+  <button onclick="
+    cartQuantity++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+    +1
+  </button>
+
+  <button onclick="
+    cartQuantity = cartQuantity + 4;
+    alert('Atention! +4 added to the Cart');
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    +4
+  </button>
+
+  <button onclick="
+    cartQuantity += 5;
+    alert('Atention! +5 added to the Cart');
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    +5
+  </button>
+
+  <button onclick="
+    cartQuantity--;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    -1
+  </button>
+
+  <button onclick="
+    cartQuantity -= 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    -2
+  </button>
+
+  <button onclick="
+    cartQuantity -= 3;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    -3
+  </button>
+
+  <script>
+    const name = 'André';
+    console.log(`My name is: ${name}`);
+
+    let cost = 1 * 5 + 2 * 3 + 1 * 9;
+    console.log(`Cost of food: $${cost}`);
+
+    let tax = cost * 0.1;
+    console.log(`Tax(10%): $${tax}`);
+
+    let totalCost = cost + tax;
+    console.log(`Total Cost: $${totalCost}`);
+
+    let cartQuantity = 0;
+
+  </script>
+</body>
+</html>
