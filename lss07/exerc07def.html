@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Exercises 07 DEF</title>
+</head>
+<body>
+
+  <button onclick="
+    convertToFahrenheit(25);
+  ">C -> F</button>
+
+<button onclick="
+convertToCelsius(100);
+">F -> C</button>
+
+<button onclick="
+    convertTemperature(180, 'F');
+  ">C <-> F</button>
+  
+  <script>
+function convertToFahrenheit(celsius) {
+  console.log(celsius * 9 / 5 + 32);
+}
+
+function convertToCelsius(fahrenheit) {
+  console.log((fahrenheit - 32) * 5 / 9);
+}
+
+function convertTemperature(degrees, unit) {
+  if (unit === 'C') {
+    console.log(`${degrees * 9 / 5 + 32}F`);
+  } else {
+    console.log(`${(degrees - 32) * 5 / 9}C`);
+  }
+}
+
+  </script>
+</body>
+</html>
