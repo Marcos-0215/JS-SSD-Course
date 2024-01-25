@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Lesson 08 Exercise EFG</title>
+</head>
+
+
+<body>
+  <script>
+
+    // Exerc E
+
+    /* WRONG WAY the exercise is teaching to avoid
+    function isSameProduct(X, Y) {
+      if (
+        X === Y
+      ) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    };
+    */
+
+    
+    function isSameProduct(X, Y) {
+      if (
+        X.price === Y.price &&
+        X.name === Y.name
+      ) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    };
+    
+
+    const product1 = {
+      name: 'basketball',
+      price: 2095
+    }
+
+    const product2 = {
+      name: 'socks',
+      price: 2200
+    }
+
+    const product3 = {
+      name: 'basketball',
+      price: 2095
+    }
+
+    isSameProduct(product1, product2);
+    isSameProduct(product1, product3);
+
+    // EXERC 8F
+
+    const exerc8f = 'Good Morning';
+
+    console.log(exerc8f.toLowerCase());
+
+    // EXERC 8G
+
+    const exerc8g = 'caja';
+
+    console.log(exerc8g.repeat(3));
+
+
+
+  </script>
+</body>
+</html>
