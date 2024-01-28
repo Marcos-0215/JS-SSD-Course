@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Lesson 09 Exerc ABC</title>
+</head>
+<body>
+
+  <button>
+    9a
+  </button>
+
+  <button class="js-button-9b">
+    9b
+  </button>
+
+  <p>
+    <button onclick="
+     clickGuess('heads'); 
+    ">
+      Heads
+    </button>
+
+    <button onclick="
+     clickGuess('tails'); 
+    ">
+      Tails
+    </button>
+
+    <p class="js-guessDisplay">
+
+    </p>
+  </p>
+
+ 
+  <script>
+    console.log(document.querySelector('button'));
+
+    document.querySelector('.js-button-9b').innerHTML = '9b done!';
+
+    function clickGuess (guess) {
+      document.querySelector('.js-guessDisplay')
+        .innerHTML = `You chose: ${guess}`;
+    }
+
+  </script>
+</body>
+</html>
