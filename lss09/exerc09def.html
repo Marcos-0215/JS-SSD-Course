@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-08">
+    <title>
+      Lesson 09 Exerc DEF
+    </title>
+  </head>
+
+  <body>
+
+    <input
+      placeholder="Name"
+      class="js-name-input"
+      onkeydown="
+        if (event.key === 'Enter') {
+          getInput();
+          clickSubmit(text);
+        };
+      "
+    >
+
+    <button
+      onclick="
+        getInput();
+        clickSubmit(text);
+      "
+    >
+      Submit
+    </button>
+
+    <p class="js-nameDisplay">
+
+    </p>
+    <script>
+
+      let text = '';
+
+      function getInput () {
+        text = document.querySelector('.js-name-input').value;
+      }
+       
+      function clickSubmit(text) {
+        document.querySelector('.js-nameDisplay')
+          .innerHTML = `Your name is: ${text}`;
+      }
+
+    </script>
+  </body>
+
+</html>
