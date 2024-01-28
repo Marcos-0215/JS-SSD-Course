@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>SSD JS Lesson 09 Exerc H</title>
+</head>
+<body>
+  
+  <input
+    placeholder="Type something"
+    onkeyup="
+      textType(value);"
+    >
+
+  <p class="js-inputDisplay">
+  </p>
+
+  <script>
+    
+    function textType(X) {
+      document.querySelector('.js-inputDisplay')
+        .innerHTML = X;
+    }
+
+  </script>
+
+</body>
+</html>
