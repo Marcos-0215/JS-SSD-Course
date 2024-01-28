@@ -15,7 +15,7 @@
       onkeydown="
         if (event.key === 'Enter') {
           getInput();
-          clickSubmit(text);
+          showInput(inputValueElem);
         };
       "
     >
@@ -23,7 +23,7 @@
     <button
       onclick="
         getInput();
-        clickSubmit(text);
+        showInput(inputValueElem);
       "
     >
       Submit
@@ -34,13 +34,13 @@
     </p>
     <script>
 
-      let text = '';
+      let inputValueElem = '';
 
       function getInput () {
-        text = document.querySelector('.js-name-input').value;
+        inputValueElem = document.querySelector('.js-name-input').value;
       }
        
-      function clickSubmit(text) {
+      function showInput(text) {
         document.querySelector('.js-nameDisplay')
           .innerHTML = `Your name is: ${text}`;
       }
