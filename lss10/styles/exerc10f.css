@@ -1,0 +1,17 @@
+body {
+  margin-bottom: 100px;
+}
+.off-button {
+  background-color: lightgrey;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
