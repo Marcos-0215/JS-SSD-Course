@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>SSD JS Exerc 11 ABC</title>
+</head>
+<body>
+  
+  <script>
+
+    // 11a
+    const nums = [10, 20, 30];
+
+    console.log(nums);
+
+    nums[2] = 99;
+
+    console.log(nums);
+
+    //11b
+
+    function getLastValue(array) {
+      console.log(array[array.length - 1]);
+    };
+
+    getLastValue(nums);
+    getLastValue([1, 20, 22, 24, 5]);
+    getLastValue(['hi', 'hello', 'good']);
+
+    //11c
+
+    function arraySwap(array) {
+      const first = array[0];
+      const last = array[array.length - 1];
+
+      array[0] = last;
+      array[array.length - 1] = first;
+
+      console.log(array);
+    };
+
+
+
+  </script>
+</body>
+</html>
