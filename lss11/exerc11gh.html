@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>SSD JS Exerc 11 GH</title>
+</head>
+<body>
+
+  <script>
+
+    //11g
+
+    const arrayg = [1, 2, 3];
+    let indexg = 0;
+    let newArrayG = [];
+    
+    while (indexg < arrayg.length) {
+      newArrayG.push(arrayg[indexg] + 1);
+      indexg ++;
+    };
+
+    console.log(newArrayG);
+
+
+    //11h
+
+    /*function addOne(array) {
+      let newArrayH = [];
+      let indexH = 0;
+      while (indexH < array.length) {
+        newArrayH.push(array[indexH] + 1);
+        indexH ++;
+      }
+      console.log(newArrayH);
+    };
+
+    addOne([1, 2, 3]);
+    addOne([-2, -1, 0, 99]);
+    */
+
+    function addOne(array) {
+      let newArrayH = [];
+      for (indexH = 0; indexH < array.length; indexH ++) {
+        newArrayH.push(array[indexH] + 1);
+      }
+      console.log(newArrayH);
+    };
+
+    addOne([1, 2, 3]);
+    addOne([-2, -1, 0, 99]);
+
+  </script>
+  
+</body>
+</html>
