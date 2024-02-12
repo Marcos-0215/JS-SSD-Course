@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>SSD JS Exerc 11l</title>
+</head>
+<body>
+  
+  <script>
+
+    function minMax(nums) {
+      let result = {
+          min: '',
+          max: ''
+      };
+
+      if (nums[0] === undefined) {
+        result.min = null;
+        result.max = null;
+        return console.log(result);
+      } else {
+        result = {
+          min: nums[0],
+          max: nums[0]
+        };
+      }
+
+      for (let i = 0; i < nums.length; i++) {
+        
+        if (nums[i] < result.min) {
+          result.min = nums[i];
+        }
+        if (nums[i] > result.max) {
+          result.max = nums[i];
+        }
+      };
+      console.log(result);
+    }
+
+    minMax([1, -3, 5]);
+    minMax([-2, 3, -5, 7, 10]);
+    minMax([]);
+    minMax([3]);
+
+  </script>
+</body>
+</html>
