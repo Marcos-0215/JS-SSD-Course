@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSD JS Exerc 11n</title>
+</head>
+<body>
+
+  <script>
+
+    function countWords(words) {
+      const result = {};
+
+      for(let i = 0; i < words.length; i++) {
+        const counted = words[i];
+
+        if (!result[counted]) {
+          result[counted] = 1;
+        } else {
+          result[counted] += 1;
+        }
+      };
+
+      console.log(result);
+    };
+
+    countWords(['apple', 'grape', 'apple', 'apple']);
+    countWords(['john', 'arthur', 'arthur', 'charles', 'john', 'arthur'])
+
+  </script>
+  
+</body>
+</html>
