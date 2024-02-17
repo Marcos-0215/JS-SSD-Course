@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSD JS Exerc 11q</title>
+</head>
+<body>
+
+  <script>
+
+    function findIndex(array, word) {
+      let result = -1;
+
+      for(let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          result = i;
+          break;
+        }
+      }
+      console.log(result);
+    };
+
+    findIndex(['hello', 'world', 'search', 'search'], 'world');
+    findIndex(['search', 'world', 'hello', 'search'], 'hello');
+
+    findIndex(['green', 'red', 'blue', 'red'], 'red');
+    findIndex(['green', 'red', 'blue', 'red'], 'yellow');
+
+
+  </script>
+  
+</body>
+</html>
