@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 11r</title>
+</head>
+<body>
+
+  <script>
+
+    function removeEgg(foods) {
+      let result = [];
+
+      for (let i = 0; i < foods.length; i++) {
+        if (foods[i] === 'egg') {
+          continue;
+        } else {
+          result.push(foods[i]);
+        }
+      }
+
+      console.log(result);
+
+    }
+
+    removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
+    removeEgg(['egg', 'apple', 'egg', 'butter', 'ham', 'orange', 'egg']);
+
+  </script>
+  
+</body>
+</html>
