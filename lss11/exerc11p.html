@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSD JS Exerc 11p</title>
+</head>
+<body>
+
+  <script>
+
+    function search(array) {
+      let result = -1;
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 'search') {
+          result = i;
+          break;
+        };
+      };
+
+      console.log(result);
+    };
+
+    search(['hello', 'world', 'search', 'search']);
+    search(['not', 'found']);
+    search(['search', 'world', 'hello', 'search']);
+
+    search(['hello', 'world', 'search', 'good', 'search']);
+
+  </script>
+  
+</body>
+</html>
