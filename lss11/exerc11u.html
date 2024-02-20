@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 11u</title>
+</head>
+<body>
+
+  <script>
+
+    function removeEgg(foods) {
+      let reversed = foods.slice().reverse();
+      let result = [];
+      let count = 0;
+
+      for (let i = 0; i < reversed.length; i++) {
+        if (reversed[i] === 'egg' && count < 2) {
+          count++;
+          continue;
+        } else {
+          result.push(reversed[i]);
+        }
+      }
+      
+      return result.reverse();
+      //console.log(result.reverse());
+
+    }
+    
+    const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+    console.log(removeEgg(foods));
+    console.log(foods);
+    
+    const foods2 = ['egg', 'apple', 'egg', 'butter', 'ham', 'orange', 'egg'];
+    console.log(removeEgg(foods2));
+    console.log(foods2);
+
+
+  </script>
+  
+</body>
+</html>
