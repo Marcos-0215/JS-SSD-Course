@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 12d</title>
+</head>
+<body>
+
+  <button 
+    class="js-start-button"
+    onclick="change();
+    ">Start
+  </button>
+
+  <script>
+
+    function change() {
+      const buttonContent = document.querySelector('.js-start-button');
+
+      buttonContent.innerHTML = 'Loading...';
+      
+      setTimeout(function() {
+        buttonContent.innerHTML = 'Finished';
+      }, 1000);
+
+    };
+
+  </script>
+  
+</body>
+</html>
