@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>SSD JS Exerc 12ab</title>
+</head>
+<body>
+  
+
+  <script>
+
+    const add = function() {
+      console.log(2 + 3);
+    }
+
+    function runTwice(fun) {
+      fun();
+      fun();
+    }
+
+    runTwice(function() {
+      console.log('12b');
+    })
+    
+    runTwice(add);
+
+
+
+
+/*
+ANOTAÇÃO PARA LEMBRAR DE COMO FUNCIONAM AS CALLBACK FUNCTIONS (TIRADA DE REVISÃO SSD JS Part1)
+
+    function run(param) {
+  param();
+}
+run(function() {                               
+  console.log('hello4');                   
+});
+*/
+
+  </script>
+</body>
+</html>
