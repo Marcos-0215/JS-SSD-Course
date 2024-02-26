@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App</title>
+</head>
+<body>
+
+  <h1>
+    SSD JS Exerc 12h
+  </h1>
+
+  <button onclick="
+    messages++;
+  ">
+    Add
+  </button>
+
+  <button onclick="
+    messages--;
+  ">
+    Remove
+  </button>
+  <script>
+
+    const normalTitle = document.title;
+
+    let isNormalTitle = true;
+
+    let messages = 2;
+
+
+    setInterval(() => {
+      if (isNormalTitle) {
+        document.title = `(${messages}) New messages`;
+        isNormalTitle = false;
+      } else {
+        document.title = normalTitle;
+        isNormalTitle = true;
+      }
+    }, 1000);
+
+
+  </script>
+  
+</body>
+</html>
