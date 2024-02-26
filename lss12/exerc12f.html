@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SSD JS Exerc 12f</title>
+
+  </head>
+  <body>
+
+    <button
+    onclick="
+    addToCart();
+    "
+  >
+    Add to cart
+  </button>
+
+  <p
+  class="js-display"
+  >
+  </p>
+
+  <script>
+
+    let timeoutId;
+
+    function addToCart() {
+
+      const display = document.querySelector('.js-display');
+
+      display.innerHTML = 'Added';
+
+      clearTimeout(timeoutId);
+      
+      timeoutId = setTimeout(
+        function() {
+          display.innerHTML = '';
+        },
+        2000
+      );
+
+    };
+
+
+  </script>
+
+  </body>
+</html>
