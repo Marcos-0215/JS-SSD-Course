@@ -4,6 +4,8 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   ties: 0
 };
 
+const autoBtn = document.querySelector('.js-auto-button');
+
 updateScoreElement();
 
 /*
@@ -19,22 +21,19 @@ if (!score) {
 let isAutoPlaying = false;
 let intervalId;
 
-//const autoPlay = () => {
 
-//};
-function autoPlay() {
+autoBtn.addEventListener('click', () => {
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
-
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
   }
-}
+});
 
 document.querySelector('.js-rock-button')
   .addEventListener('click', () => {
@@ -109,9 +108,9 @@ function playGame(playerMove) {
   document.querySelector('.js-result').innerHTML = result;
 
   document.querySelector('.js-moves').innerHTML = `You
-<img src="images/${playerMove}-emoji.png" class="move-icon">
-<img src="images/${computerMove}-emoji.png" class="move-icon">
-Computer`;
+  <img src="images/${playerMove}-emoji.png" class="move-icon">
+  <img src="images/${computerMove}-emoji.png" class="move-icon">
+  Computer`;
 }
 
 function updateScoreElement() {
