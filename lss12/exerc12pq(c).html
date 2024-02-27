@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 12pq(c)</title>
+</head>
+<body>
+
+  <button 
+    class="js-start-button"
+    >Start
+  </button>
+
+  <script>
+
+    const startBtn = document.querySelector('.js-start-button');
+
+    startBtn.addEventListener('click', () => {
+      setTimeout(() => startBtn.innerHTML = 'Finished', 1000);
+    });
+
+
+  </script>
+  
+</body>
+</html>
