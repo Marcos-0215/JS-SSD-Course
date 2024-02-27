@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App</title>
+</head>
+<body>
+
+  <h1>
+    SSD JS Exerc 12pq(i)
+  </h1>
+
+  <button
+  class="js-add-button"
+  >
+    Add
+  </button>
+
+  <button class="js-remove-button"
+  >
+    Remove
+  </button>
+  <script>
+
+    let normalTitle = 'App';
+    const addBtn = document.querySelector('.js-add-button');
+    const removeBtn = document.querySelector('.js-remove-button');
+
+    let isNormalTitle = true;
+
+    let messages = 2;
+
+    addBtn.addEventListener('click', () => {
+      messages++;
+      document.title = `(${messages}) New messages`;
+    });
+
+    removeBtn.addEventListener('click', () => {
+      if (messages >= 1) {
+        messages--;
+        document.title = `(${messages}) New messages`;
+      }
+    });
+
+
+
+    setInterval(() => {
+      if (isNormalTitle && messages >= 1) {
+        document.title = `(${messages}) New messages`;
+        isNormalTitle = false;
+      } else {
+        document.title = normalTitle;
+        isNormalTitle = true;
+      }
+    }, 1000);
+
+
+  </script>
+  
+</body>
+</html>
