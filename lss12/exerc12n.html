@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 12n</title>
+</head>
+<body>
+
+  <script>
+
+    //MY RESPONSE
+/*
+    function removeEgg(foods) {
+      return foods.filter((value) => {
+        if (value === 'egg') {
+          return false;
+        } else {
+          return true;
+        }
+      });
+
+    };*/
+
+    //CLEANER RESPONSE BY SIMON
+    function removeEgg(foods) {
+      return foods.filter(x => x !== 'egg');
+
+    };
+
+    // TESTS FOR REVIEWING BOOLEANS RESULTS OF DECLARATIONS
+    const egg = 'egg';
+    console.log(egg === 'egg');
+    console.log(egg !== 'egg');
+    console.log(egg === 'apple');
+    console.log(egg !== 'apple');
+
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    console.log(removeEgg(['egg', 'egg', 'egg']));
+    console.log(removeEgg(['apple', 'egg', 'ham', 'juice']));
+
+  </script>
+  
+</body>
+</html>
