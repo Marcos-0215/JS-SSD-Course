@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App</title>
+</head>
+<body>
+
+  <h1>
+    SSD JS Exerc 12pq(g)
+  </h1>
+  <script>
+
+    const normalTitle = document.title;
+
+    let isNormalTitle = true;
+
+    setInterval(() => {
+      if (isNormalTitle) {
+        document.title = '(2) New messages';
+        isNormalTitle = false;
+      } else {
+        document.title = normalTitle;
+        isNormalTitle = true;
+      }
+    }, 1000);
+
+
+  </script>
+  
+</body>
+</html>
