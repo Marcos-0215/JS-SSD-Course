@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 12pq(e)</title>
+</head>
+<body>
+
+  <button
+    class="js-add-button"
+    >Add to cart
+  </button>
+
+  <p
+  class="js-display"
+  >
+  </p>
+
+  <script>
+
+    const addBtn = document.querySelector('.js-add-button');
+    const display = document.querySelector('.js-display');
+
+    addBtn.addEventListener('click', () => {
+      display.innerHTML = 'Added';
+      
+      setTimeout(() => display.innerHTML = '', 2000);
+
+    })
+
+
+    // LEARNED THAT THE 1ST PARAMETER OF THE BUILT-IN SETTIMEOUT FUNCTION CANNOT BE A DIRECT COMMAND (CONSOLE.LOG('X') FOR EX). IT MUST BE A FUNCTION, WITH THE COMMAND IN IT.
+
+
+  </script>
+
+</body>
+</html>
