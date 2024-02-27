@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSD JS Exerc 12o</title>
+</head>
+<body>
+
+  <script>
+
+    function removeEgg(foods) {
+      let count = 2;
+
+      return foods.filter(x => {
+        if (x === 'egg' && count > 0) {
+          count--;
+          return false;
+        } else {
+          return true;
+        };
+      });
+    
+    };
+
+
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    console.log(removeEgg(['egg', 'egg', 'egg']));
+    console.log(removeEgg(['apple', 'egg', 'ham', 'juice']));
+
+  </script>
+  
+</body>
+</html>
