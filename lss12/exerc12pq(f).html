@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SSD JS Exerc 12pq(f)</title>
+
+  </head>
+  <body>
+
+    <button
+      class="js-add-button
+      ">Add to cart
+    </button>
+
+  <p
+  class="js-display"
+  >
+  </p>
+
+  <script>
+
+    const display = document.querySelector('.js-display');
+    const addBtn = document.querySelector('.js-add-button');
+    let timeoutId;
+
+
+    addBtn.addEventListener('click', () => {
+
+      display.innerHTML = 'Added';
+
+      clearTimeout(timeoutId);
+      
+      timeoutId = setTimeout(() => display.innerHTML = '', 2000);
+
+    });
+
+
+  </script>
+
+  </body>
+</html>
