@@ -6,6 +6,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
 const autoBtn = document.querySelector('.js-auto-button');
 const resetBtn = document.querySelector('.js-reset-score-button');
+const confirmMsg = document.querySelector('.js-confirm-reset-msg');
 
 updateScoreElement();
 
@@ -53,14 +54,34 @@ function resetScore() {
   updateScoreElement();
 };
 
-resetBtn.addEventListener('click', () => resetScore());
+resetBtn.addEventListener('click', () => confirmReset());
 
 document.body.addEventListener('keydown', (event) => {
   if (event.key === 'Backspace') {
-    resetScore();
+    confirmReset();
   }
 });
 
+
+function confirmReset() {
+  confirmMsg.innerHTML =
+  `Are you sure you want to reset the score?
+  <button
+    class= "confirm-button"
+    onclick="
+    resetScore();
+    confirmMsg.innerHTML = '';
+    ">Yes
+  </button>
+
+  <button
+    class= "confirm-button"
+    onclick="
+    confirmMsg.innerHTML = '';
+    ">No
+  </button>
+  `;
+};
 
 
 
