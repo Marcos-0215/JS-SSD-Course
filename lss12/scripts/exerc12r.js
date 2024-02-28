@@ -5,6 +5,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 };
 
 const autoBtn = document.querySelector('.js-auto-button');
+const resetBtn = document.querySelector('.js-reset-score-button');
 
 updateScoreElement();
 
@@ -43,6 +44,25 @@ document.body.addEventListener('keydown', event => {
   if (event.key === 'a') {
   autoPlay();
 }});
+
+function resetScore() {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+};
+
+resetBtn.addEventListener('click', () => resetScore());
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'Backspace') {
+    resetScore();
+  }
+});
+
+
+
 
 document.querySelector('.js-rock-button')
   .addEventListener('click', () => {
