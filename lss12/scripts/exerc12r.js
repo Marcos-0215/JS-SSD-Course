@@ -29,9 +29,12 @@ autoBtn.addEventListener('click', () => {
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    autoBtn.innerHTML = 'Stop Playing';
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    autoBtn.innerHTML = 'Auto Play';
+
   }
 });
 
