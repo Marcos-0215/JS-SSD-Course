@@ -22,7 +22,7 @@ let isAutoPlaying = false;
 let intervalId;
 
 
-autoBtn.addEventListener('click', () => {
+function autoPlay() {
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
@@ -34,9 +34,15 @@ autoBtn.addEventListener('click', () => {
     clearInterval(intervalId);
     isAutoPlaying = false;
     autoBtn.innerHTML = 'Auto Play';
-
   }
-});
+};
+
+autoBtn.addEventListener('click', () => autoPlay());
+
+document.body.addEventListener('keydown', event => {
+  if (event.key === 'a') {
+  autoPlay();
+}});
 
 document.querySelector('.js-rock-button')
   .addEventListener('click', () => {
